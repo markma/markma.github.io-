@@ -1,8 +1,6 @@
 
 
 
-  
-
 
 
 
@@ -18,9 +16,9 @@
   
   
   
-    <meta name="description" content="">
+    <meta name="description" content="Qt 中如果想要使用多个已经写好的界面类，往往会发现界面类的名称要么是“MainWindow”，要么是“Widget”，或者是“Dialog”。那么重名的界面类在一起就会在所难免。或者你想修改界面类的名称。那么一定要切记不可直接修改界面类的名称。否则和容易出错。">
   
-  <title>标签: Hexo [ Mark's Blog ]</title>
+  <title>Qt中界面类名的修改 [ Mark's Blog ]</title>
   
   
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -38,6 +36,15 @@
 
 <body>
 <div class="side-navigate hide-area">
+  
+    <div class="item prev">
+      <a href="../../Hexo/HEXO-Github-快速搭建属于自己的博客/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        HEXO+Github,快速搭建属于自己的博客
+      </div>
+    </div>
   
   
 </div>
@@ -71,9 +78,9 @@
           </li>
         
           
-            <li class="active">
+            <li>
           
-            <a href="..">标签</a>
+            <a href="../../tags">标签</a>
             
           </li>
         
@@ -103,70 +110,80 @@
     <div id="content-inner">
       
       
-  <div id="tag">
-    <h1>Hexo</h1>
-    
+  <article id="post">
+    <h1>Qt中界面类名的修改</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">撰写于 2016-08-09</span>
+      
+        <span id = "post-title-updated">修改于 2016-08-10</span>
+      
+      
+      <span id = "post-title-categories">分类
       
       
         
-          
         
+        <a href="../../categories/QtStudy/">QtStudy</a>
+      
+      </span>
       
       
-      <div class="post-title-item">
-  
-  <a href="/Hexo/HEXO-Github-快速搭建属于自己的博客/">
-  
-    HEXO+Github,快速搭建属于自己的博客
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">8-9</span>
-    
-    <span id = "post-title-categories">分类
-    
-    
-      
-      
-      <a href="../../categories/Hexo/">Hexo</a>
-    
-    </span>
-    
-    
-    <span id = "post-title-tags">
-    标签
-    
-    
-      
-      
-      <a href="">Hexo</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
-      
-      
-      
-    
+      <span id = "post-title-tags">
+      标签
       
       
         
+        
+        <a href="../../tags/Qt/">Qt</a>
       
+      </span>
       
+    </p>
     
+    <blockquote>
+<p>Qt 中如果想要使用多个已经写好的界面类，往往会发现界面类的名称要么是“MainWindow”，要么是“Widget”，或者是“Dialog”。那么重名的界面类在一起就会在所难免。或者你想修改界面类的名称。那么一定要切记不可直接修改界面类的名称。否则和容易出错。<br><a id="more"></a></p>
+</blockquote>
+<h2 id="Qt中界面类名的修改"><a href="#Qt中界面类名的修改" class="headerlink" title="Qt中界面类名的修改"></a>Qt中界面类名的修改</h2><p>正确的解决方法如下：</p>
+<ul>
+<li><p>1.修改.ui文件名称为xxxmainwindow.ui/xxxwidget.ui/xxxdialog.ui在工程树下右键修改即可。当然也可以为其他名字，总之要清晰明了有个性。</p>
+</li>
+<li><p>2.修改.h,.cpp名称与.ui文件名称对应：同样是在工程树下右键修改即可。</p>
+</li>
+<li><p>3.修改界面类名：右键类名，选择Refactor(重构器)-&gt;Rename Symbol under cursor(Ctrl+Shift+R)。</p>
+</li>
+</ul>
+<p><img src="http://i.imgur.com/U5hMUJj.png" alt="" title="右键类名"></p>
+<p>然后在此处即可方便的修改。然后类名即可全部被替换修改。</p>
+<p><img src="http://i.imgur.com/XlzUuej.png" alt="" title="替换修改"></p>
+
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <div class="random-toc">
+    <h2>目录</h2>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Qt中界面类名的修改"><span class="toc-text">Qt中界面类名的修改</span></a></li></ol>
   </div>
+</div>
+
+  
+<nav id="pagination">
+  
+    <a href="../../Hexo/HEXO-Github-快速搭建属于自己的博客/" class="prev">&larr; 上一篇 HEXO+Github,快速搭建属于自己的博客</a>
+  
 
   
 
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
+
+      
+      <div class="ds-thread" data-thread-key="QtStudy/Qt中界面类名的修改/" data-title="Qt中界面类名的修改" data-url="https://markma.github.io/QtStudy/Qt中界面类名的修改/"></div>
       
       
       
@@ -184,6 +201,18 @@
 </div>
 
 </div>
+
+  <script type="text/javascript">
+var duoshuoQuery = {short_name:"markma"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
 
 
 
@@ -298,6 +327,8 @@ var unsplashConfig = {"gravity":"north"};
 var turnoffBackgroundImage = false;
 
 
+
+  turnoffBackgroundImage = true;
 
 
 var backgroundColor = "D7CCC8";
